@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 import {FilerWrap, FieldCaption, ContactInput} from "./Filter.styled"
 
-export const Filter = ({ filter, onChange }) => {
+export const Filter = ({ search, onChange }) => {
   return (
     <FilerWrap>
-      <FieldCaption htmlFor="filter">
+      <FieldCaption htmlFor="search">
         Find contact by name
         <ContactInput 
         type="text" 
-        name="filter" 
-        value={filter} 
+        name="search" 
+        value={search} 
         onChange={onChange} />
       </FieldCaption>
     </FilerWrap>
@@ -17,6 +17,6 @@ export const Filter = ({ filter, onChange }) => {
 };
 
 Filter.propTypes = {
-  filter: PropTypes.string.isRequired,
+  search: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
