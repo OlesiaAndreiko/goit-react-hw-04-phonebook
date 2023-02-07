@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Form = styled.form`
+export const Form = styled.form.attrs({ autoComplete: 'off' })`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -12,7 +12,7 @@ export const Form = styled.form`
   box-shadow: 0px 4px 4px rgb(0, 0, 0, 15%);
 `;
 
-export const BtnContact = styled.button`
+export const BtnContact = styled.button.attrs({ type: 'submit' })`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,6 @@ export const BtnContact = styled.button`
   border-color: transparent;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
     background-color: #188ce8;
@@ -53,7 +52,6 @@ export const ContactInput = styled.input`
   border-radius: 4px;
   outline: rgba(0, 0, 0, 0);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
     border-color: #2196f3;
